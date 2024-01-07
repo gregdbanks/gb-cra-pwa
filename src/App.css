@@ -3,18 +3,12 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 24vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #5a5960;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +18,92 @@
   color: white;
 }
 
+.App-content {
+  width: 80%;
+  margin: auto;
+}
+
+.blog-post {
+  color: black;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px dotted #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.status {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  margin-right: 10%;
+}
+
+.expand-btn {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.expand-btn:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+/* Custom Scrollbar Styling */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #5a5960;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.install-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 8%;
+}
+
+.install-button:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+.update-date {
+  font-size: 12px;
+  font-style: italic;
+  color: #000;
+  text-align: start;
 }
