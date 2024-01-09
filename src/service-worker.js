@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
 // This service worker can be customized!
@@ -12,6 +13,10 @@ import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
+
+importScripts(
+  "https://storage.googleapis.com/workbox-cdn/releases/6.1.5/workbox-sw.js"
+);
 
 clientsClaim();
 
@@ -68,5 +73,10 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
+
+workbox.routing.registerRoute(
+  new RegExp("https://jsonplaceholder.typicode.com/posts"),
+  new workbox.strategies.NetworkFirst()
+);
 
 // Any other custom service worker logic can go here.
