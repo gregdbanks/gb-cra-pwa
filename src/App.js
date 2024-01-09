@@ -100,6 +100,9 @@ function Blog() {
             Install Offline Mode
           </button>
         )}
+        <p className="status" style={{ color: isOnline ? "#219B43" : "#DE3119" }}>
+          Status: {isOnline ? "Online" : "Offline"}
+        </p>
         <img src={logo} className="App-logo" alt="logo" />
         <main className="App-content">
           {lastUpdated && <p className="update-date" title={"Last updated on " + lastUpdated}>
